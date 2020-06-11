@@ -1,0 +1,21 @@
+{
+  "name": "reeves/very-oop-painting",
+  "description": "oop paint analog in php",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "mi",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    
+  },
+  "require-dev": {
+
+  },
+  "autoload": {
+    "psr-4": {"Painting\\": "src/"}
+  }
+}
