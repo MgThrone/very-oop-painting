@@ -12,7 +12,7 @@ final class Canvas
     private $area;
 
     /**
-     * @var CanvasIComposition
+     * @var CanvasComposition
      */
     private $composition;
 
@@ -23,7 +23,7 @@ final class Canvas
      */
     public function __construct($sizeX = 800, $sizeY = 600) {
         $this->area = new CanvasArea($sizeX, $sizeY);
-        $this->composition = CanvasIComposition::newEmpty();
+        $this->composition = CanvasComposition::newEmpty();
     }
 
     /**

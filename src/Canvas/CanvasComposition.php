@@ -2,7 +2,7 @@
 
 namespace Painting\Canvas;
 
-final class CanvasIComposition implements iComposition
+final class CanvasComposition implements iComposition
 {
     private $items = [];
 
@@ -20,7 +20,7 @@ final class CanvasIComposition implements iComposition
 
     /**
      * @param CanvasItem $item
-     * @return CanvasIComposition
+     * @return CanvasComposition
      */
     public function recreateWith(CanvasItem $item) {
         return new self(
