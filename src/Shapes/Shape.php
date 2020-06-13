@@ -6,7 +6,7 @@ use Painting\Canvas\Canvas;
 
 abstract class Shape implements iShape
 {
-    public function drawSelfOn(Canvas $cv, $posX, $posY, $colorName) {
-        $cv->drawOne($this, $posX, $posY, $colorName);
+    public function putSelfOn(Canvas $cv, $posX, $posY, $colorName) {
+        $cv->putOne($this, $posX, $posY, $colorName);
     }
 }

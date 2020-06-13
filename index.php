@@ -7,15 +7,15 @@ use Painting\Shapes\Text;
 
 require __DIR__ . '/vendor/autoload.php';
 
-$canvas = new Canvas($sizeX = 800, $sizeY = 600);
+$canvas = new Canvas;
 
-Circle::newFromRadius(5)
-    ->drawSelfOn($canvas, $posX = 0, $posY = 0, $colorName = 'red');
+Circle::newWithRadius(50)
+    ->putSelfOn($canvas, $posX = 100, $posY = 100, $colorName = 'red');
 
-Square::newFromSideLength(9)
-    ->drawSelfOn($canvas, $posX = 10, $posY = 10, $colorName = 'green');
+Square::newWithSideLength(90)
+    ->putSelfOn($canvas, $posX = 200, $posY = 200, $colorName = 'green');
 
-Text::newFromContent('- This is your spine. - Wtf put it back!')
-    ->drawSelfOn($canvas, $posX = 50, $posY = 50, $colorName = 'blue');
+Text::newWithContent('- This is your spine. - Wtf put it back!')
+    ->putSelfOn($canvas, $posX = 50, $posY = 50, $colorName = 'blue');
 
-print_r($canvas);
+$canvas->draw('/app/canvas.png');

@@ -2,7 +2,7 @@
 
 namespace Painting\Canvas;
 
-final class CanvasComposition implements iComposition
+final class Composition implements iComposition
 {
     private $items = [];
 
@@ -19,12 +19,22 @@ final class CanvasComposition implements iComposition
     }
 
     /**
-     * @param CanvasItem $item
-     * @return CanvasComposition
+     * @param Element $item
+     * @return Composition
      */
-    public function recreateWith(CanvasItem $item) {
+    public function recreateWith(Element $item) {
         return new self(
             array_merge($this->items, [$item])
         );
+    }
+
+    /**
+     * @param string $filePath
+     */
+    public function drawInto($image) {
+        imagecolorallocate($image, 255,255,255);
+        foreach($this->items as $item) {
+            $item->drawSelfInto($image);
+        }
     }
 }

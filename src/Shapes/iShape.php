@@ -6,5 +6,7 @@ use \Painting\Canvas\Canvas;
 
 interface iShape
 {
-    public function drawSelfOn(Canvas $cv, $posX, $posY, $colorName);
+    public function putSelfOn(Canvas $cv, $posX, $posY, $colorName);
+
+    public function drawSelfOn($image, $x, $y, $color);
 }

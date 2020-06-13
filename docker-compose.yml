@@ -3,7 +3,7 @@ version: "3.8"
 services:
   php:
     build: ./php
-    container_name: painting-php
+    container_name: oopaint-php
     volumes:
       - ./:/app
     working_dir: /app

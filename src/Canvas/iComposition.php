@@ -4,5 +4,5 @@ namespace Painting\Canvas;
 
 interface iComposition
 {
-    public function recreateWith(CanvasItem $element);
+    public function recreateWith(Element $element);
 }

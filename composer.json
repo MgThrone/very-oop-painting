@@ -1,19 +1,19 @@
 {
-  "name": "reeves/very-oop-painting",
+  "name": "dmetreeves/oopaint",
   "description": "oop paint analog in php",
   "minimum-stability": "stable",
   "license": "proprietary",
   "authors": [
     {
-      "name": "mi",
-      "email": "email@example.com"
+      "name": "dmetreeves",
+      "email": "mgthrone91@gmail.com"
     }
   ],
   "require": {
-    
+    "ext-gd": "*"
   },
   "require-dev": {
-
+    "phpunit/phpunit": "^9.2"
   },
   "autoload": {
     "psr-4": {"Painting\\": "src/"}
