@@ -2,7 +2,7 @@
 
 namespace Painting\Shapes;
 
-final class Square extends Shape
+final class Square implements iShape
 {
     /**
      * @var float $sideLength

@@ -4,31 +4,37 @@ namespace Painting\Canvas;
 
 class Color
 {
-    private $value;
+    /**
+     * @var string
+     */
+    private $name;
 
-    private function __construct($value)
-    {
-        $this->value = $value;
+    /**
+     * Color constructor.
+     * @param string $name
+     */
+    private function __construct($name) {
+        $this->name = $name;
     }
 
-    public static function fromName($name) {
+    public static function newFromName($name) {
         return new self($name);
     }
 
     public function red() {
-        if($this->value == 'red')
+        if($this->name == 'red')
             return 255;
         return 0;
     }
 
     public function green() {
-        if($this->value == 'green')
+        if($this->name == 'green')
             return 128;
         return 0;
     }
 
     public function blue() {
-        if($this->value == 'blue')
+        if($this->name == 'blue')
             return 255;
         return 0;
     }

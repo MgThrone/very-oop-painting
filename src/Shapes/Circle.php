@@ -2,7 +2,7 @@
 
 namespace Painting\Shapes;
 
-final class Circle extends Shape
+final class Circle implements iShape
 {
     /**
      * @var float

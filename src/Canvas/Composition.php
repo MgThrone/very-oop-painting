@@ -8,7 +8,7 @@ final class Composition implements iComposition
 
     /**
      * CanvasIComposition constructor.
-     * @param array $items
+     * @param Element[] $items
      */
     private function __construct($items = []) {
         $this->items = $items;
@@ -16,6 +16,14 @@ final class Composition implements iComposition
 
     public static function newEmpty() {
         return new self;
+    }
+
+    /**
+     * @param array $elements
+     * @return Composition
+     */
+    public static function newFromArray(array $elements) {
+        return new self($elements);
     }
 
     /**
@@ -29,10 +37,9 @@ final class Composition implements iComposition
     }
 
     /**
-     * @param string $filePath
+     * @param string $image
      */
     public function drawInto($image) {
-        imagecolorallocate($image, 255,255,255);
         foreach($this->items as $item) {
             $item->drawSelfInto($image);
         }
